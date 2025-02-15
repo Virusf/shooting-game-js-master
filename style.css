@@ -17,6 +17,25 @@ table {
 canvas {
 	border: 5px solid blue;
 }
+
+.gameArea {
+	border: 5px solid blue;
+	height: 500px;
+	width: 750px;
+	cursor: crosshair;
+	overflow: hidden;
+	position: relative;
+}
+
+#target {
+	position: absolute;
+	height: 29px;
+	width: 40px;
+	transition: 0.25s;
+	animation: animateTarget 10s infinite;
+}
+
+
 td { 
 	width: 185px;
 	font-size: 1.5em;
@@ -114,4 +133,21 @@ td.top {
 
 .start {
 	background-color: black;
+}
+
+.game-over {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ff0000;
+    background: #000000; /* Couleur de fond noir */
+}
+
+
+@keyframes animateTarget {
+	to {
+		transform: translateY(-200px) rotate(90deg);
+	}
 }
